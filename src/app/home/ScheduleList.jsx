@@ -19,7 +19,7 @@ const Schedulelist = ({ searchTerm }) => {
             {searchResults.length > 0 ? <ul className="list-group">
                 {searchResults.map(schedule => (
                     <li className="list-group-item" key={schedule.id}>
-                        <h6 className="my-0">{schedule.zone}</h6>
+                        <h6 className="my-0 pb-1">{schedule.zone}</h6>
                         <div className="text-muted">{schedule.name} - {schedule.time} <span className="badge badge-secondary">{schedule.temperature.toFixed(2)} °{scale}</span></div>
                         <div className="d-block mt-1" role="group" >
                             <Link to={`/edit/${schedule.id}`}><button className="btn btn-link btn-sm d-inline pl-0" onClick={() => editSchedule(schedule.id)}>Edit</button></Link>

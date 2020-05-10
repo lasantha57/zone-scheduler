@@ -70,11 +70,11 @@ const Schedule = (route) => {
             <form className="mx-auto" onSubmit={onSubmit}>
                 <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="schedule">Schedule Name</label>
-                    <input type="text" className="form-control" name="name" id="schedule" value={schedule.name} onChange={(e) => handleOnChange('name', e.target.value)} />
+                    <input type="text" className="form-control mt-2" name="name" id="schedule" value={schedule.name} onChange={(e) => handleOnChange('name', e.target.value)} />
                 </div>
                 <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="zone">Zone</label>
-                    <select className="form-control" name="zoneId" value={schedule.zoneId} onChange={(e) => handleOnChange('zoneId', e.target.value)}>
+                    <select className="form-control mt-2" name="zoneId" value={schedule.zoneId} onChange={(e) => handleOnChange('zoneId', e.target.value)}>
                         <option value="default">Choose...</option>
                         {zones.length > 0 && zones.map((zone) => {
                             return <option key={zone.id} value={zone.id}>{zone.name}</option>
@@ -83,11 +83,11 @@ const Schedule = (route) => {
                 </div>
                 <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="time">Time</label>
-                    <input type="time" className="form-control" id="time" name="time" value={schedule.time} onChange={(e) => handleOnChange('time', e.target.value)} />
+                    <input type="time" className="form-control mt-2" id="time" name="time" value={schedule.time} onChange={(e) => handleOnChange('time', e.target.value)} />
                 </div>
                 <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="temperature">Temperature</label>
-                    <div className="input-group">
+                    <div className="input-group mt-2">
                         <div className="input-group-prepend">
                             <div className="input-group-text">{scale === 'C' ? '°C' : '°F'}</div>
                         </div>
