@@ -4,8 +4,6 @@ import { useHistory, Link } from 'react-router-dom';
 
 import { zoneService } from '../../api-services/zone-service';
 
-import Button from '../shared/controls/button/Button'
-
 const Schedule = (route) => {
     const { addSchedule, schedules, editSchedule, scale } = useContext(GlobalContext);
     let history = useHistory();
@@ -69,12 +67,12 @@ const Schedule = (route) => {
 
     return (
         <div className="container">
-            <form className="" onSubmit={onSubmit}>
-                <div className="form-group col-sm-6">
+            <form className="mx-auto" onSubmit={onSubmit}>
+                <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="schedule">Schedule Name</label>
                     <input type="text" className="form-control" name="name" id="schedule" value={schedule.name} onChange={(e) => handleOnChange('name', e.target.value)} />
                 </div>
-                <div className="form-group col-sm-6">
+                <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="zone">Zone</label>
                     <select className="form-control" name="zoneId" value={schedule.zoneId} onChange={(e) => handleOnChange('zoneId', e.target.value)}>
                         <option value="default">Choose...</option>
@@ -83,11 +81,11 @@ const Schedule = (route) => {
                         })}
                     </select>
                 </div>
-                <div className="form-group col-sm-6">
+                <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="time">Time</label>
                     <input type="time" className="form-control" id="time" name="time" value={schedule.time} onChange={(e) => handleOnChange('time', e.target.value)} />
                 </div>
-                <div className="form-group col-sm-6">
+                <div className="form-group col-sm-6 mx-auto">
                     <label htmlFor="temperature">Temperature</label>
                     <div className="input-group">
                         <div className="input-group-prepend">
@@ -96,9 +94,9 @@ const Schedule = (route) => {
                         <input id="temperature" type="number" className="form-control" name="temperature" value={schedule.temperature} onChange={(e) => handleOnChange('temperature', e.target.value)} />
                     </div>
                 </div>
-                <div className="form-group col-sm-6 mt-4">
-                    <Button type="submit" className="btn btn-secondary px-4 mr-2" disabled={!isFormValid() ? 'disabled' : ''}>{editMode ? 'Update' : 'Create'} Schedule</Button>
-                    <Link to={'/'}><Button type="button" className="btn btn-outline-secondary px-4">Cancel</Button></Link>
+                <div className="form-group col-sm-6 mx-auto mt-4">
+                    <button type="submit" className="btn btn-secondary px-4 mr-2" disabled={!isFormValid() ? 'disabled' : ''}>{editMode ? 'Update' : 'Create'} Schedule</button>
+                    <Link to={'/'}><button type="button" className="btn btn-outline-secondary px-4">Cancel</button></Link>
                 </div>
             </form>
         </div>
