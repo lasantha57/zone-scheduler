@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/zone-scheduler/static/css/main.9efe0913.chunk.css",
+    "main.js": "/zone-scheduler/static/js/main.0f9495a6.chunk.js",
+    "main.js.map": "/zone-scheduler/static/js/main.0f9495a6.chunk.js.map",
+    "runtime-main.js": "/zone-scheduler/static/js/runtime-main.7e5c4fc9.js",
+    "runtime-main.js.map": "/zone-scheduler/static/js/runtime-main.7e5c4fc9.js.map",
+    "static/css/2.89f067aa.chunk.css": "/zone-scheduler/static/css/2.89f067aa.chunk.css",
+    "static/js/2.fb80b0f5.chunk.js": "/zone-scheduler/static/js/2.fb80b0f5.chunk.js",
+    "static/js/2.fb80b0f5.chunk.js.map": "/zone-scheduler/static/js/2.fb80b0f5.chunk.js.map",
+    "index.html": "/zone-scheduler/index.html",
+    "precache-manifest.7eef78644c4686e1c57fe601a973e935.js": "/zone-scheduler/precache-manifest.7eef78644c4686e1c57fe601a973e935.js",
+    "service-worker.js": "/zone-scheduler/service-worker.js",
+    "static/css/2.89f067aa.chunk.css.map": "/zone-scheduler/static/css/2.89f067aa.chunk.css.map",
+    "static/css/main.9efe0913.chunk.css.map": "/zone-scheduler/static/css/main.9efe0913.chunk.css.map",
+    "static/js/2.fb80b0f5.chunk.js.LICENSE.txt": "/zone-scheduler/static/js/2.fb80b0f5.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7e5c4fc9.js",
+    "static/css/2.89f067aa.chunk.css",
+    "static/js/2.fb80b0f5.chunk.js",
+    "static/css/main.9efe0913.chunk.css",
+    "static/js/main.0f9495a6.chunk.js"
+  ]
+}
