@@ -28,9 +28,7 @@ const App = () => {
     <div className="container">
       <Router>
         <GlobalProvider>
-          <header>
-            <Header></Header>
-          </header>
+          <Header></Header>
           <main>
             {renderRoutes()}
           </main>
