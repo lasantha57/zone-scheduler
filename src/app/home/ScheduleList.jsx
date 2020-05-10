@@ -18,13 +18,11 @@ const Schedulelist = ({ searchTerm }) => {
         <Fragment>
             {searchResults.length > 0 ? <ul className="list-group">
                 {searchResults.map(schedule => (
-                    <li className="list-group-item d-flex justify-content-between lh-condensed" key={schedule.id}>
-                        <div>
-                            <h6 className="my-0">{schedule.zone}</h6>
-                            <small className="text-muted">{schedule.name} - {schedule.time} <span className="badge badge-secondary">{schedule.temperature.toFixed(2)} °{scale}</span></small>
-                        </div>
-                        <div>
-                            <Link to={`/edit/${schedule.id}`}><button className="btn btn-light btn-sm d-inline mr-2" onClick={() => editSchedule(schedule.id)}>Edit</button></Link>
+                    <li className="list-group-item" key={schedule.id}>
+                        <h6 className="my-0">{schedule.zone}</h6>
+                        <div className="text-muted">{schedule.name} - {schedule.time} <span className="badge badge-secondary">{schedule.temperature.toFixed(2)} °{scale}</span></div>
+                        <div className="d-block mt-1" role="group" >
+                            <Link to={`/edit/${schedule.id}`}><button className="btn btn-link btn-sm d-inline pl-0" onClick={() => editSchedule(schedule.id)}>Edit</button></Link>
                             <button className="btn btn-light btn-sm" onClick={() => removeSchedule(schedule.id)}>Remove</button>
                         </div>
                     </li>
