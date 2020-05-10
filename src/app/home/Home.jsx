@@ -7,7 +7,7 @@ const Home = () => {
     const [searchTerm, setSearchTerm] = React.useState('');
 
     return (
-        <div className="container">
+        <div className="container pt-0">
             <input type="search" className="form-control mb-3" placeholder="Search by Zone" value={searchTerm} onChange={(e) => { setSearchTerm(e.target.value) }} />
             <Schedulelist searchTerm={searchTerm}></Schedulelist>
         </div>
