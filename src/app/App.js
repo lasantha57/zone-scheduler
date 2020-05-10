@@ -1,10 +1,41 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
+
 import './App.css';
 
-function App() {
+import Header from './shared/header/Header';
+import Home from './home/Home';
+import Schedule from './schedule/Schedule';
+
+import { GlobalProvider } from './../context/GlobalContext';
+
+const App = () => {
+
+  const renderRoutes = () => {
+    return (
+
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/create" component={Schedule} />
+        <Route exact path="/edit/:id" component={Schedule} />
+        <Redirect to="/" />
+      </Switch>
+
+    )
+  }
+
   return (
-    <div className="app">
-      Hello
+    <div className="container">
+      <Router>
+        <GlobalProvider>
+          <header>
+            <Header></Header>
+          </header>
+          <main>
+            {renderRoutes()}
+          </main>
+        </GlobalProvider>
+      </Router>
     </div>
   );
 }
