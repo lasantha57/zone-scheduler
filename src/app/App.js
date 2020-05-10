@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 
 import './App.css';
@@ -6,21 +6,21 @@ import './App.css';
 import Header from './shared/header/Header';
 import Home from './home/Home';
 import Schedule from './schedule/Schedule';
-
+import ErrorHandler from './shared/ErrorHandler';
 import { GlobalProvider } from './../context/GlobalContext';
 
 const App = () => {
 
   const renderRoutes = () => {
     return (
-
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/create" component={Schedule} />
-        <Route exact path="/edit/:id" component={Schedule} />
-        <Redirect to="/" />
-      </Switch>
-
+      <Suspense fallback={<div>Loading...</div>}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/create" component={Schedule} />
+          <Route exact path="/edit/:id" component={Schedule} />
+          <Redirect to="/" />
+        </Switch>
+      </Suspense>
     )
   }
 
@@ -30,7 +30,7 @@ const App = () => {
         <GlobalProvider>
           <Header></Header>
           <main>
-            {renderRoutes()}
+            <ErrorHandler>{renderRoutes()}</ErrorHandler>
           </main>
         </GlobalProvider>
       </Router>

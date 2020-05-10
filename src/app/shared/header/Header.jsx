@@ -3,8 +3,6 @@ import { NavLink, Link } from 'react-router-dom';
 
 import { GlobalContext } from '../../../context/GlobalContext';
 
-import './Header.css';
-
 const Header = () => {
 
     const { scale, changeScale } = useContext(GlobalContext);
