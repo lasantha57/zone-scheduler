@@ -35,9 +35,9 @@ ESLint and Prettier are used to improve the quality of the code.
 
 ## Roadmap
 
-Enhance the code coverage on unit tests
-Ehnance user input validations
-Enahance UI/UX
+1. Enhance the code coverage on unit tests
+2. Ehnance user input validations
+3. Enahance UI/UX
 
 ## Preview
 ![Overview](https://github.com/lasantha57/zone-scheduler/blob/master/screens/home-page.png)
