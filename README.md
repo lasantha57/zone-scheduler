@@ -23,3 +23,14 @@ With the useContext API and React Hooks, there is no need to install external li
 This project was created using creat-react-app boilerplate as it helps to simplify development process as it gives zero configurations and start the implementation quick as possible.
 
 I used bootstrap as style framework as it gives more utility classes to be used when it comes to the layouting and positioning elements, and it supports reposiveness as well.
+
+I have configured `enzyme` to be used as JavaScript Testing utility as it supports shallow redering and all. But cound't cover the tests in this application.
+
+ESLint and Prettier are used to improve the quality of the code.
+
+## Roadmap
+
+Enhance the code coverage on unit tests
+Ehnance user input validations
+Enahance UI/UX
+
