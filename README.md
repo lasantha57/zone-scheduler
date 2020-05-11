@@ -6,12 +6,13 @@ NPM 5.2+
 
 ## How To Run
 
-`yarn`
-`yarn start`
+1. Install dependencies using `yarn` or `npm start`
+2. Quick start using `yarn start` or `npm start`
 
 The project can be accessed by open `http://localhost:1234/` in browser.
 
-To create a production like environment run `yarn run build`. This will create a new folder called `build`, that can be served in a server.
+To create a production like environment run `yarn build` or `npm run build`. 
+This will create a new folder called `build`, that can be served in a server.
 
 ## How it was created
 
