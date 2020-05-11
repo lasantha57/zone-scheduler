@@ -1,9 +1,9 @@
 import React, { Fragment, useContext, useEffect } from 'react';
-import { GlobalContext } from '../../context/GlobalContext';
+import { StoreContext } from '../../context/StoreContext';
 import { Link } from 'react-router-dom';
 
 const Schedulelist = ({ searchTerm }) => {
-    const { schedules, removeSchedule, editSchedule, scale } = useContext(GlobalContext);
+    const { schedules, removeSchedule, editSchedule, scale } = useContext(StoreContext);
 
     const [searchResults, setSearchResults] = React.useState([]);
 

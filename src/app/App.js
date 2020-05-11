@@ -7,7 +7,7 @@ import Header from './shared/header/Header';
 import Home from './home/Home';
 import Schedule from './schedule/Schedule';
 import ErrorHandler from './shared/ErrorHandler';
-import { GlobalProvider } from './../context/GlobalContext';
+import { StoreProvider } from './../context/StoreContext';
 
 const App = () => {
 
@@ -27,12 +27,12 @@ const App = () => {
   return (
     <div className="container">
       <Router>
-        <GlobalProvider>
+        <StoreProvider>
           <Header></Header>
           <main>
             <ErrorHandler>{renderRoutes()}</ErrorHandler>
           </main>
-        </GlobalProvider>
+        </StoreProvider>
       </Router>
     </div>
   );

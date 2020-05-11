@@ -8,9 +8,9 @@ const initialState = {
     ]
 }
 
-export const GlobalContext = createContext(initialState);
+export const StoreContext = createContext(initialState);
 
-export const GlobalProvider = ({ children }) => {
+export const StoreProvider = ({ children }) => {
 
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
@@ -42,7 +42,7 @@ export const GlobalProvider = ({ children }) => {
         });
     };
 
-    return (<GlobalContext.Provider value={{
+    return (<StoreContext.Provider value={{
         schedules: state.schedules,
         scale: state.scale,
         removeSchedule,
@@ -51,5 +51,5 @@ export const GlobalProvider = ({ children }) => {
         changeScale
     }}>
         {children}
-    </GlobalContext.Provider>);
+    </StoreContext.Provider>);
 }

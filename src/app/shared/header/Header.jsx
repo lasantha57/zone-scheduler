@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
-import { GlobalContext } from '../../../context/GlobalContext';
+import { StoreContext } from '../../../context/StoreContext';
 
 const Header = () => {
 
-    const { scale, changeScale } = useContext(GlobalContext);
+    const { scale, changeScale } = useContext(StoreContext);
 
     const toggleScale = (selected) => {
         if (scale !== selected) {

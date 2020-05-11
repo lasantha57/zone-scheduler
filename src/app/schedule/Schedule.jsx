@@ -1,11 +1,11 @@
 import React, { useState, useContext, useEffect, useCallback } from 'react';
-import { GlobalContext } from '../../context/GlobalContext';
+import { StoreContext } from '../../context/StoreContext';
 import { useHistory, Link } from 'react-router-dom';
 
 import { zoneService } from '../../api-services/zone-service';
 
 const Schedule = (route) => {
-    const { addSchedule, schedules, editSchedule, scale } = useContext(GlobalContext);
+    const { addSchedule, schedules, editSchedule, scale } = useContext(StoreContext);
     let history = useHistory();
 
     const currentScheduleId = route?.match?.params?.id;
