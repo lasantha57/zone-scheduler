@@ -23,7 +23,7 @@ This will create a new folder called `build`, that can be served in a server.
 
 Here I used react library for Front End development as it easy the work with DOM API, and further it supports to handle the state. Adding external library I was able to enable the FE routing for the react application.
 
-With the `useContext` API and React Hooks, there is no need to install external libraries or add a bunch of files and folders in order to have application state. This makes it a much simpler, more straightforward way to handle global state management in the application.
+With the `useContext` API and React Hooks makes it a much simpler, more straightforward way to handle global state management in the application.
 
 This project was created using creat-react-app boilerplate as it helps to simplify development process as it gives zero configurations and start the implementation quick as possible.
 
