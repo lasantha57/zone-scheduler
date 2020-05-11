@@ -1,3 +1,8 @@
+## Demo
+
+Application is delopyed to here.
+http://lasantha57.github.io/zone-scheduler
+
 ## Requirements
 
 Node 8
@@ -34,3 +39,5 @@ Enhance the code coverage on unit tests
 Ehnance user input validations
 Enahance UI/UX
 
+## Preview
+![Overview](https://github.com/lasantha57/zone-scheduler/blob/master/screens/home-page.png)
